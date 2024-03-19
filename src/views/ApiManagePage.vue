@@ -21,7 +21,7 @@
   
 
 <script>
-import { h, defineComponent, ref, Component } from 'vue'
+import { h, defineComponent, ref } from 'vue'
 import { NCarousel } from 'naive-ui'
 
 export default defineComponent({
@@ -31,7 +31,6 @@ export default defineComponent({
   setup () {
     return {
       inverted: ref(false),
-      menuOptions
     }
   }
 })
