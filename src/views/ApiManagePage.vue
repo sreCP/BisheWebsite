@@ -1,32 +1,28 @@
 <template>
-    <n-carousel autoplay>
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-      >
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-      >
-    </n-carousel>
+   <n-card title="API管理" size="huge" :bordered="false">
+    增加、删除、管理可用的API
+  </n-card>
+  <n-divider />
+  <n-data-table
+    :columns="columns"
+    :data="data"
+    :pagination="pagination"
+    
+   
+  />
+
   </template>
   
 
-<script>
+<script lang="ts">
 import { h, defineComponent, ref } from 'vue'
-import { NCarousel } from 'naive-ui'
+import { NCard, NDivider,NDataTable } from 'naive-ui'
+
+
 
 export default defineComponent({
   components:{
-    NCarousel
+    NCard, NDivider,NDataTable
   },
   setup () {
     return {
@@ -37,9 +33,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  .carousel-img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-  }
+  .n-card {
+  max-width: 300px;
+  text-align: left;
+}
   </style>
