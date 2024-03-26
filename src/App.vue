@@ -1,4 +1,5 @@
 <template>
+  <n-message-provider>
   <n-space vertical class="ct">
     <n-space> <n-switch v-model:value="inverted"> 
     <template #checked>
@@ -27,6 +28,7 @@
       </n-layout-footer>
     </n-layout>
   </n-space>
+</n-message-provider>
 </template>
 
 <script lang="ts">
@@ -34,7 +36,8 @@ import { h, defineComponent, ref, Component } from 'vue'
 import {
   NIcon, NSpace, NLayout,
   NLayoutHeader, NLayoutSider,
-  NLayoutFooter, NSwitch, NMenu
+  NLayoutFooter, NSwitch, NMenu,
+  NMessageProvider
 } from 'naive-ui'
 import {
   BookOutline as BookIcon,
@@ -110,7 +113,7 @@ const menuOptions = [
 
 export default defineComponent({
   components: {
-    NIcon, NSpace, NLayout, NLayoutHeader, NLayoutSider, NLayoutFooter, NSwitch, NMenu
+    NIcon, NSpace, NLayout, NLayoutHeader, NLayoutSider, NLayoutFooter, NSwitch, NMenu, NMessageProvider
   },
   setup() {
     return {
